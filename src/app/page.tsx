@@ -1,65 +1,99 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import ROASCalculator from "./components/ROASCalculator";
+import AdSlot from "./components/AdSlot";
+import Link from "next/link";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Break-Even ROAS Calculator — Free Tool for Marketers",
+  description:
+    "Calculate the exact break-even ROAS for your ads in seconds. Enter your COGS, fulfillment costs, and other expenses to instantly see the minimum ROAS you need to stay profitable.",
+};
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 space-y-12">
+      <AdSlot slot="homepage-top" className="h-24 sm:h-20" />
+
+      <section className="text-center space-y-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-zinc-100 tracking-tight">
+          Break-Even ROAS Calculator
+        </h1>
+        <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
+          Find the minimum Return on Ad Spend needed to cover your costs.
+          Adjust your inputs — results update instantly.
+        </p>
+      </section>
+
+      <ROASCalculator />
+
+      <section className="prose prose-invert prose-zinc max-w-none">
+        <h2 className="text-xl font-semibold text-zinc-200 mb-4">
+          What Is Break-Even ROAS and Why Does It Matter?
+        </h2>
+
+        <p className="text-zinc-400 leading-relaxed">
+          Return on Ad Spend (ROAS) measures how much revenue you generate for
+          every dollar spent on advertising. A ROAS of 3x means you earned $3
+          for every $1 of ad spend. But raw ROAS numbers only tell part of the
+          story — what really matters is whether your ROAS is <em>above</em>{" "}
+          or <em>below</em> your break-even point.
+        </p>
+
+        <p className="text-zinc-400 leading-relaxed mt-4">
+          Your <strong className="text-zinc-300">break-even ROAS</strong> is
+          the exact threshold where your advertising revenue covers all your
+          variable costs — including the cost of goods sold (COGS), fulfillment,
+          shipping, platform fees, and any other expenses tied to each
+          transaction. Below this number, every sale you drive through paid ads
+          actually loses you money. Above it, you&apos;re generating real profit.
+        </p>
+
+        <p className="text-zinc-400 leading-relaxed mt-4">
+          The formula is elegantly simple:{" "}
+          <strong className="text-zinc-300">
+            Break-Even ROAS = 1 ÷ Gross Margin
+          </strong>
+          . If your gross margin (revenue minus all variable costs) is 30%, your
+          break-even ROAS is 1 ÷ 0.30 = <strong className="text-zinc-300">3.33x</strong>.
+          Any campaign delivering below that is destroying value, even if the
+          absolute ROAS looks impressive on a dashboard.
+        </p>
+
+        <p className="text-zinc-400 leading-relaxed mt-4">
+          This matters most when scaling. A campaign running at 2.8x ROAS with
+          a 3.33x break-even point loses more money with every additional dollar
+          you pour into it. Marketers who don&apos;t know their break-even threshold
+          frequently scale losing campaigns under the assumption that &quot;more spend
+          equals more revenue.&quot; Technically true — but also more losses.
+        </p>
+
+        <p className="text-zinc-400 leading-relaxed mt-4">
+          Knowing your break-even ROAS also reframes how you bid, how you
+          evaluate creative performance, and how you set target ROAS (tROAS)
+          goals in platforms like Google Ads and Meta Ads Manager. Rather than
+          chasing an arbitrary benchmark, you anchor every decision to a
+          financially meaningful number derived from your own cost structure.
+          Add a desired profit margin on top and you have your target ROAS — the
+          minimum ROAS you need to not just survive, but actually grow.
+        </p>
+
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Link
+            href="/what-is-roas"
+            className="text-amber-500 hover:text-amber-400 text-sm font-medium transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Learn more: What is ROAS? →
+          </Link>
+          <Link
+            href="/break-even-roas-formula"
+            className="text-amber-500 hover:text-amber-400 text-sm font-medium transition-colors"
           >
-            Documentation
-          </a>
+            Deep dive: The Break-Even ROAS Formula →
+          </Link>
         </div>
-      </main>
+      </section>
+
+      <AdSlot slot="homepage-bottom" className="h-24 sm:h-20" />
     </div>
   );
 }
