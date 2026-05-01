@@ -57,14 +57,20 @@ export default function RootLayout({
                 Calculator
               </Link>
               <Link
-                href="/what-is-roas"
+                href="/blog"
                 className="hover:text-zinc-100 transition-colors"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/what-is-roas"
+                className="hover:text-zinc-100 transition-colors hidden sm:block"
               >
                 What is ROAS?
               </Link>
               <Link
                 href="/break-even-roas-formula"
-                className="hover:text-zinc-100 transition-colors"
+                className="hover:text-zinc-100 transition-colors hidden sm:block"
               >
                 Formula
               </Link>

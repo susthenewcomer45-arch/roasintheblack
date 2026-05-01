@@ -7,15 +7,45 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://roasintheblack.com/what-is-roas</loc>
+    <loc>https://roasintheblack.com/blog</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://roasintheblack.com/blog/what-is-roas</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://roasintheblack.com/break-even-roas-formula</loc>
+    <loc>https://roasintheblack.com/blog/break-even-roas-formula</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roasintheblack.com/blog/good-roas-by-industry</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roasintheblack.com/blog/roas-vs-roi</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://roasintheblack.com/what-is-roas</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://roasintheblack.com/break-even-roas-formula</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

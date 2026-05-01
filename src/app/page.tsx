@@ -77,19 +77,71 @@ export default function HomePage() {
           minimum ROAS you need to not just survive, but actually grow.
         </p>
 
+        <p className="text-zinc-400 leading-relaxed mt-4">
+          Here&apos;s the uncomfortable truth about paid advertising: every dollar
+          spent below your break-even ROAS is a guaranteed loss. Not a wash, not
+          a break-even — a loss. You are paying to lose money, and you are losing
+          it faster with every additional dollar you scale.
+        </p>
+
+        <p className="text-zinc-400 leading-relaxed mt-4">
+          Most businesses scaling ad spend without knowing their break-even ROAS
+          are in exactly this position. The campaigns look active, the dashboards
+          show revenue, and the ROAS numbers seem reasonable — until you account
+          for cost of goods, fulfillment, and fees. At that point, what looked
+          like growth was actually acceleration toward a larger loss. Calculate
+          your number first. Scale second.
+        </p>
+
         <div className="mt-8 flex flex-wrap gap-4">
           <Link
-            href="/what-is-roas"
+            href="/blog/what-is-roas"
             className="text-amber-500 hover:text-amber-400 text-sm font-medium transition-colors"
           >
             Learn more: What is ROAS? →
           </Link>
           <Link
-            href="/break-even-roas-formula"
+            href="/blog/break-even-roas-formula"
             className="text-amber-500 hover:text-amber-400 text-sm font-medium transition-colors"
           >
             Deep dive: The Break-Even ROAS Formula →
           </Link>
+          <Link
+            href="/blog"
+            className="text-amber-500 hover:text-amber-400 text-sm font-medium transition-colors"
+          >
+            All guides →
+          </Link>
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-xl font-semibold text-zinc-200">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-3">
+          {[
+            {
+              q: "What is a good ROAS for my industry?",
+              a: "It depends on your margins, not your industry. Use the calculator above to find your break-even point first, then aim for 20–50% above that. Industry averages are directionally useful but cannot tell you if your specific campaigns are profitable.",
+            },
+            {
+              q: "How is break-even ROAS different from target ROAS?",
+              a: "Break-even ROAS is the minimum ROAS needed to cover all variable costs — the floor. Target ROAS adds your desired profit margin on top of that floor. Break-even tells you when you stop losing money; target ROAS tells you when you start making the profit you want.",
+            },
+            {
+              q: "Can I use this for Google Ads and Meta Ads?",
+              a: "Yes — the break-even ROAS formula works for any ad platform. The math is based on your cost structure, not the platform. Enter your numbers once and the result applies to Google, Meta, TikTok, Pinterest, or any other channel where you track revenue from ad spend.",
+            },
+          ].map(({ q, a }) => (
+            <div
+              key={q}
+              className="bg-zinc-900 border border-zinc-800 rounded-xl p-5"
+            >
+              <h3 className="text-sm font-semibold text-zinc-200 mb-2">{q}</h3>
+              <p className="text-sm text-zinc-400 leading-relaxed">{a}</p>
+            </div>
+          ))}
         </div>
       </section>
 
