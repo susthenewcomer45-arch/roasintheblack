@@ -1,5 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import generatedPostsRaw from "@/lib/generated-posts.json";
+
+interface Post {
+  slug: string;
+  title: string;
+  description: string;
+  readTime: string;
+  date?: string;
+}
+
+const generatedPosts = generatedPostsRaw as Post[];
 
 export const metadata: Metadata = {
   title: "ROAS & Advertising Profitability Blog",
@@ -7,7 +18,7 @@ export const metadata: Metadata = {
     "Guides on ROAS, break-even calculations, industry benchmarks, and advertising profitability for marketers and business owners.",
 };
 
-const posts = [
+const editorialPosts: Post[] = [
   {
     slug: "what-is-roas",
     title: "What Is ROAS? A Plain English Guide for Business Owners",
@@ -31,12 +42,15 @@ const posts = [
   },
   {
     slug: "roas-vs-roi",
-    title: "ROAS vs ROI: What's the Difference and Which One Should You Track?",
+    title: "ROAS vs ROI: What’s the Difference and Which One Should You Track?",
     description:
-      "Two metrics, two different jobs. Here's when to use ROAS, when to use ROI, and how to avoid the confusion that leads to bad decisions.",
+      "Two metrics, two different jobs. Here’s when to use ROAS, when to use ROI, and how to avoid the confusion that leads to bad decisions.",
     readTime: "6 min read",
   },
 ];
+
+// Generated posts appear newest-first above the editorial ones
+const allPosts: Post[] = [...generatedPosts, ...editorialPosts];
 
 export default function BlogIndexPage() {
   return (
@@ -52,7 +66,7 @@ export default function BlogIndexPage() {
       </header>
 
       <div className="space-y-4">
-        {posts.map((post) => (
+        {allPosts.map((post) => (
           <article
             key={post.slug}
             className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-zinc-700 transition-colors"
