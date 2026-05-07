@@ -26,6 +26,84 @@ export default function HomePage() {
 
       <ROASCalculator />
 
+      <section className="space-y-6">
+        <div className="space-y-1">
+          <h2 className="text-xl font-semibold text-zinc-200">
+            How Real Businesses Use This Calculator
+          </h2>
+          <p className="text-zinc-500 text-sm">
+            Four scenarios showing what happens when businesses finally know their number.
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-4">
+          {[
+            {
+              icon: "🛍️",
+              type: "Online Apparel Store",
+              scenario:
+                "Sarah sells women's clothing with a 45% COGS, 10% shipping costs, and 3% in platform fees. She was running Meta ads at 2.8x ROAS thinking she was profitable.",
+              roas: "2.17x",
+              takeaway:
+                "Sarah realized she was actually profitable — but only barely. She used this to set a minimum 2.5x ROAS floor on all campaigns.",
+            },
+            {
+              icon: "🔧",
+              type: "HVAC Company",
+              scenario:
+                "Mike runs a local HVAC company with low product costs but high labor (55% of revenue) and fuel/logistics costs of 8%. He was unsure if his Google Ads were worth it.",
+              roas: "3.12x",
+              takeaway:
+                "Mike discovered his Google Ads at 4x ROAS were genuinely profitable. He doubled his ad budget the following month.",
+            },
+            {
+              icon: "💊",
+              type: "Supplement Brand",
+              scenario:
+                "A supplement brand had 35% COGS, 12% fulfillment, and 6% in chargebacks and returns. They were scaling TikTok ads at 3x ROAS assuming profitability.",
+              roas: "3.77x",
+              takeaway:
+                "They were actually losing money on every sale. They paused scaling, cut fulfillment costs, and reset their ROAS target to 4.5x.",
+            },
+            {
+              icon: "💻",
+              type: "SaaS Tool",
+              scenario:
+                "A SaaS startup with near-zero COGS (8%) and minimal fulfillment (2%) was nervous about running paid ads. Their team thought they needed a 5x ROAS to be safe.",
+              roas: "1.11x",
+              takeaway:
+                "They realized almost any positive ROAS was profitable. They launched Google Ads confidently and hit 3x ROAS in their first month.",
+            },
+          ].map(({ icon, type, scenario, roas, takeaway }) => (
+            <div
+              key={type}
+              className="bg-zinc-900 border border-zinc-800 rounded-xl p-5 flex flex-col gap-4"
+            >
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">{icon}</span>
+                <span className="text-sm font-semibold text-zinc-200">{type}</span>
+              </div>
+
+              <p className="text-zinc-400 text-sm leading-relaxed">{scenario}</p>
+
+              <div className="bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 flex items-center justify-between">
+                <span className="text-xs text-zinc-500 uppercase tracking-wide">
+                  Break-Even ROAS
+                </span>
+                <span className="text-amber-400 font-bold font-mono text-lg">
+                  {roas}
+                </span>
+              </div>
+
+              <div className="flex gap-2">
+                <span className="text-amber-500 text-xs mt-0.5">→</span>
+                <p className="text-zinc-400 text-xs leading-relaxed">{takeaway}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <section className="prose prose-invert prose-zinc max-w-none">
         <h2 className="text-xl font-semibold text-zinc-200 mb-4">
           What Is Break-Even ROAS and Why Does It Matter?

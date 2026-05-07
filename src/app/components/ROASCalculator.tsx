@@ -39,6 +39,55 @@ function clamp(val: number, min: number, max: number) {
   return Math.min(Math.max(val, min), max);
 }
 
+interface Interpretation {
+  message: string;
+  borderColor: string;
+  bgColor: string;
+}
+
+function getInterpretation(roas: number): Interpretation {
+  if (roas < 1.5) {
+    return {
+      message: "⚠️ Very tight margins. Your costs leave almost no room for profitable advertising. Consider reducing COGS or fulfillment costs before scaling ads.",
+      borderColor: "border-amber-600/40",
+      bgColor: "bg-amber-600/5",
+    };
+  }
+  if (roas < 2) {
+    return {
+      message: "📊 Slim margins. You can run profitable ads but scaling will be difficult. Every dollar counts at this level.",
+      borderColor: "border-amber-500/40",
+      bgColor: "bg-amber-500/5",
+    };
+  }
+  if (roas < 3) {
+    return {
+      message: "✅ Moderate margins. This is workable for most ad platforms. Focus on optimizing your campaigns before scaling.",
+      borderColor: "border-amber-400/40",
+      bgColor: "bg-amber-400/5",
+    };
+  }
+  if (roas < 4) {
+    return {
+      message: "💪 Healthy margins. You have good room to run and scale profitable campaigns across most platforms.",
+      borderColor: "border-amber-400/50",
+      bgColor: "bg-amber-400/8",
+    };
+  }
+  if (roas < 6) {
+    return {
+      message: "🚀 Strong margins. You're in an excellent position to scale aggressively. Most campaigns will be profitable.",
+      borderColor: "border-amber-300/50",
+      bgColor: "bg-amber-300/5",
+    };
+  }
+  return {
+    message: "⭐ Exceptional margins. You have significant room to dominate your market through paid advertising.",
+    borderColor: "border-amber-300/60",
+    bgColor: "bg-amber-300/8",
+  };
+}
+
 export default function ROASCalculator() {
   const [cogs, setCogs] = useState("40");
   const [fulfillment, setFulfillment] = useState("8");
@@ -66,6 +115,8 @@ export default function ROASCalculator() {
       : result.breakEvenROAS <= 4
       ? "text-amber-400"
       : "text-red-400";
+
+  const interpretation = result ? getInterpretation(result.breakEvenROAS) : null;
 
   return (
     <div className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
@@ -99,7 +150,7 @@ export default function ROASCalculator() {
         />
       </div>
 
-      <div className="mx-6 mb-6 rounded-xl bg-zinc-950 border border-zinc-800 p-6">
+      <div className="mx-6 mb-4 rounded-xl bg-zinc-950 border border-zinc-800 p-6">
         {result === null ? (
           <p className="text-red-400 text-sm font-medium text-center">
             Total costs must be less than 100% to calculate break-even ROAS.
@@ -143,6 +194,16 @@ export default function ROASCalculator() {
           </div>
         )}
       </div>
+
+      {interpretation && (
+        <div
+          className={`mx-6 mb-4 rounded-xl border px-5 py-4 ${interpretation.bgColor} ${interpretation.borderColor}`}
+        >
+          <p className="text-sm text-zinc-300 leading-relaxed">
+            {interpretation.message}
+          </p>
+        </div>
+      )}
 
       <div className="px-6 pb-5">
         <p className="text-xs text-zinc-600 text-center">
