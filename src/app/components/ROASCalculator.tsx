@@ -88,10 +88,43 @@ function getInterpretation(roas: number): Interpretation {
   };
 }
 
+const PRESETS = [
+  { name: "Apparel",           cogs: "40", fulfillment: "10", other: "3"  },
+  { name: "Supplements",       cogs: "25", fulfillment: "12", other: "5"  },
+  { name: "SaaS",              cogs: "5",  fulfillment: "0",  other: "8"  },
+  { name: "Home Services",     cogs: "15", fulfillment: "0",  other: "10" },
+  { name: "Electronics",       cogs: "55", fulfillment: "8",  other: "3"  },
+  { name: "General eCommerce", cogs: "40", fulfillment: "8",  other: "5"  },
+] as const;
+
 export default function ROASCalculator() {
   const [cogs, setCogs] = useState("40");
   const [fulfillment, setFulfillment] = useState("8");
   const [other, setOther] = useState("5");
+  const [activePreset, setActivePreset] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
+
+  function applyPreset(preset: (typeof PRESETS)[number]) {
+    setCogs(preset.cogs);
+    setFulfillment(preset.fulfillment);
+    setOther(preset.other);
+    setActivePreset(preset.name);
+  }
+
+  function handleCogsChange(v: string) {
+    setCogs(v);
+    setActivePreset(null);
+  }
+
+  function handleFulfillmentChange(v: string) {
+    setFulfillment(v);
+    setActivePreset(null);
+  }
+
+  function handleOtherChange(v: string) {
+    setOther(v);
+    setActivePreset(null);
+  }
 
   const result = useMemo(() => {
     const c = clamp(parseFloat(cogs) || 0, 0, 99);
@@ -118,6 +151,20 @@ export default function ROASCalculator() {
 
   const interpretation = result ? getInterpretation(result.breakEvenROAS) : null;
 
+  function handleShare() {
+    if (!result) return;
+    const text = `My Break-Even ROAS is ${result.breakEvenROAS.toFixed(2)}x (COGS: ${cogs}%, Fulfillment: ${fulfillment}%, Other costs: ${other}%). Calculate yours free at roasintheblack.com`;
+
+    // Open Twitter synchronously so popup blockers don't block it
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+    window.open(twitterUrl, "_blank");
+
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    });
+  }
+
   return (
     <div className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
       <div className="px-6 py-5 border-b border-zinc-800 bg-zinc-900">
@@ -129,24 +176,46 @@ export default function ROASCalculator() {
         </p>
       </div>
 
+      {/* Industry presets */}
+      <div className="px-6 pt-5 pb-1">
+        <p className="text-xs text-zinc-500 uppercase tracking-wider mb-3">
+          Quick Start: Pick your industry
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {PRESETS.map((preset) => (
+            <button
+              key={preset.name}
+              onClick={() => applyPreset(preset)}
+              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${
+                activePreset === preset.name
+                  ? "bg-amber-500 text-zinc-900 shadow-sm shadow-amber-500/30"
+                  : "bg-zinc-800 text-zinc-400 border border-zinc-700 hover:border-amber-500/50 hover:text-amber-400"
+              }`}
+            >
+              {preset.name}
+            </button>
+          ))}
+        </div>
+      </div>
+
       <div className="p-6 grid gap-5 sm:grid-cols-3">
         <InputField
           label="Cost of Goods (COGS)"
           hint="Product cost as % of sale price"
           value={cogs}
-          onChange={setCogs}
+          onChange={handleCogsChange}
         />
         <InputField
           label="Fulfillment & Shipping"
           hint="Shipping, packaging, handling"
           value={fulfillment}
-          onChange={setFulfillment}
+          onChange={handleFulfillmentChange}
         />
         <InputField
           label="Other Variable Costs"
           hint="Returns, platform fees, etc."
           value={other}
-          onChange={setOther}
+          onChange={handleOtherChange}
         />
       </div>
 
@@ -202,6 +271,28 @@ export default function ROASCalculator() {
           <p className="text-sm text-zinc-300 leading-relaxed">
             {interpretation.message}
           </p>
+        </div>
+      )}
+
+      {/* Share your result */}
+      {result && (
+        <div className="mx-6 mb-4">
+          <button
+            onClick={handleShare}
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 active:bg-amber-600 text-zinc-900 font-semibold text-sm transition-all cursor-pointer"
+          >
+            {copied ? (
+              <>
+                <span>✓</span>
+                <span>Copied to clipboard!</span>
+              </>
+            ) : (
+              <>
+                <span>↗</span>
+                <span>Share Your Result</span>
+              </>
+            )}
+          </button>
         </div>
       )}
 
