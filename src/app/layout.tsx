@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import Image from "next/image";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -21,6 +22,9 @@ export const metadata: Metadata = {
   },
   description:
     "Calculate your break-even ROAS instantly. Free tool for marketers and ecommerce brands to know the exact ROAS needed to cover costs and stay profitable.",
+  icons: {
+    icon: "/images/logo.png",
+  },
   openGraph: {
     siteName: "ROAS in the Black",
     type: "website",
@@ -48,6 +52,13 @@ export default function RootLayout({
         <header className="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-sm sticky top-0 z-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2 group">
+              <Image
+                src="/images/logo.png"
+                alt="ROAS in the Black logo"
+                width={24}
+                height={36}
+                priority
+              />
               <span className="text-amber-500 font-bold text-lg tracking-tight group-hover:text-amber-400 transition-colors">
                 ROAS<span className="text-zinc-400 font-normal">in the</span>Black
               </span>
