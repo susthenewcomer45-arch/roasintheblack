@@ -106,6 +106,19 @@ export default function RootLayout({
               For informational purposes only. Always validate with your actual
               financials.
             </p>
+            <p className="mt-3 flex items-center justify-center gap-3">
+              <Link href="/privacy-policy" className="hover:text-zinc-300 transition-colors">
+                Privacy Policy
+              </Link>
+              <span className="text-zinc-700">·</span>
+              <Link href="/about" className="hover:text-zinc-300 transition-colors">
+                About
+              </Link>
+              <span className="text-zinc-700">·</span>
+              <Link href="/contact" className="hover:text-zinc-300 transition-colors">
+                Contact
+              </Link>
+            </p>
           </div>
         </footer>
       </body>
