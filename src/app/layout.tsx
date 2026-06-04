@@ -58,11 +58,6 @@ export default function RootLayout({
                 width={24}
                 height={36}
                 priority
-                style={{
-                  background: "transparent",
-                  backgroundColor: "transparent",
-                  mixBlendMode: "multiply",
-                }}
               />
               <span className="text-amber-500 font-bold text-lg tracking-tight group-hover:text-amber-400 transition-colors">
                 ROAS<span className="text-zinc-400 font-normal">in the</span>Black
