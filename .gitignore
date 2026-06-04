@@ -42,3 +42,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# stray binary files
+flyer.roasintheblack.com
+roasintheblack.logo.transparentbackground
+roasintheblack.logo.transparentbackground.jpg
+roasintheblack.logo.transparentbackground.png
