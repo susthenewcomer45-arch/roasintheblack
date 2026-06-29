@@ -1,0 +1,18 @@
+# ROASintheBlack.com
+
+Free break-even ROAS calculator for marketers, ecommerce brands, and business owners. Enter your cost percentages and instantly see the minimum ROAS your campaigns need to stay profitable.
+
+## Key Pages
+- Homepage / Calculator: https://roasintheblack.com
+- Blog: https://roasintheblack.com/blog
+- What is ROAS?: https://roasintheblack.com/what-is-roas
+- Break-Even ROAS Formula: https://roasintheblack.com/break-even-roas-formula
+- About: https://roasintheblack.com/about
+- Privacy Policy: https://roasintheblack.com/privacy-policy
+- Contact: https://roasintheblack.com/contact
+
+## What This Site Does
+Provides a free break-even ROAS calculator. Users enter their cost of goods, fulfillment costs, and other variable costs to instantly calculate the minimum ROAS needed to cover costs and stay profitable.
+
+## Audience
+Marketers, ecommerce brand owners, and business owners running paid advertising campaigns.
