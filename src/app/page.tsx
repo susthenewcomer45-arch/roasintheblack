@@ -26,6 +26,41 @@ export default function HomePage() {
 
       <ROASCalculator />
 
+      <section className="space-y-4">
+        <h2 className="text-xl font-semibold text-zinc-200">
+          Why We Built This
+        </h2>
+        <p className="text-zinc-400 text-base leading-relaxed">
+          We built ROASintheBlack because most ROAS advice online is generic
+          and incomplete. Articles and dashboards throw around &quot;aim for 3x
+          or 4x&quot; without ever asking about your actual costs — product
+          margins, shipping, fees, returns. That gap leaves marketers and
+          store owners scaling campaigns that look good on paper but quietly
+          lose money. We wanted a better first step: a tool that forces
+          clarity on real profitability before you spend another dollar.
+        </p>
+        <p className="text-zinc-400 text-base leading-relaxed">
+          This free calculator is built for marketers, ecommerce brands, DTC
+          founders, and small business owners who run paid ads on Meta,
+          Google, or anywhere else. Whether you&apos;re testing new campaigns or
+          auditing existing ones, it gives you the exact numbers that matter.
+          Enter your key cost percentages (product cost, shipping/fulfillment,
+          returns, platform fees, etc.), and the tool instantly calculates
+          your break-even ROAS, total cost percentage, gross margin, and
+          clear guidance on what that means for your business. No sign-up, no
+          email, no tracking.
+        </p>
+        <p className="text-zinc-400 text-base leading-relaxed">
+          The goal is simple: replace guesswork with math that&apos;s specific
+          to your business. See whether your current campaigns are truly
+          profitable, set realistic targets, and make smarter scaling
+          decisions. We&apos;re not here to sell courses or ad management
+          services. We&apos;re here to give you the missing calculator that
+          should have existed all along — clean, instant, and built around
+          actual margins instead of hype.
+        </p>
+      </section>
+
       <section className="space-y-6">
         <div className="space-y-1">
           <h2 className="text-xl font-semibold text-zinc-200">
