@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ROASCalculator from "./components/ROASCalculator";
 import AdSlot from "./components/AdSlot";
 import Link from "next/link";
+import { generateWebApplicationSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Break-Even ROAS Calculator — Free Tool for Marketers",
@@ -10,8 +11,15 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const webApplicationSchema = generateWebApplicationSchema();
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 space-y-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationSchema) }}
+      />
+
       <AdSlot slot="homepage-top" className="h-24 sm:h-20" />
 
       <section className="text-center space-y-4">
