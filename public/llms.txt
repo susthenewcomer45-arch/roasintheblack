@@ -1,6 +1,12 @@
 # ROASintheBlack.com
 
-Free break-even ROAS calculator for marketers, ecommerce brands, and business owners. Enter your cost percentages and instantly see the minimum ROAS your campaigns need to stay profitable.
+> Free break-even ROAS calculator plus a blog on Google, Meta, and TikTok ad ROAS, MER, and break-even formulas for ecommerce marketers.
+
+## What This Site Does
+Provides a free break-even ROAS calculator: enter cost of goods, fulfillment costs, and other variable costs to instantly see the minimum ROAS needed to stay profitable. The blog covers ROAS benchmarks and formulas across Google Ads, Meta Ads, and TikTok Ads, MER (Marketing Efficiency Ratio), and break-even math for ecommerce, lead gen, SaaS, and local businesses.
+
+## Audience
+Ecommerce operators and media buyers who need to know the exact ROAS at which their ad spend turns profitable.
 
 ## Key Pages
 - Homepage / Calculator: https://roasintheblack.com
@@ -8,11 +14,5 @@ Free break-even ROAS calculator for marketers, ecommerce brands, and business ow
 - What is ROAS?: https://roasintheblack.com/what-is-roas
 - Break-Even ROAS Formula: https://roasintheblack.com/break-even-roas-formula
 - About: https://roasintheblack.com/about
-- Privacy Policy: https://roasintheblack.com/privacy-policy
 - Contact: https://roasintheblack.com/contact
-
-## What This Site Does
-Provides a free break-even ROAS calculator. Users enter their cost of goods, fulfillment costs, and other variable costs to instantly calculate the minimum ROAS needed to cover costs and stay profitable.
-
-## Audience
-Marketers, ecommerce brand owners, and business owners running paid advertising campaigns.
+- Privacy Policy: https://roasintheblack.com/privacy-policy
