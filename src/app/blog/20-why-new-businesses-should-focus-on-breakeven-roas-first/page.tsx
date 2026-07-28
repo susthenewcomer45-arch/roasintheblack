@@ -1,6 +1,7 @@
 // Auto-generated 2026-06-01 — do not edit manually
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: '20. Why New Businesses Should Focus on Break-Even ROAS First | ROAS in the Black',
@@ -130,6 +131,8 @@ export default function BlogPost() {
             Calculate My Break-Even ROAS →
           </Link>
         </div>
+
+        <RelatedArticles currentSlug="20-why-new-businesses-should-focus-on-breakeven-roas-first" />
 
         <div className="flex gap-6 text-sm border-t border-zinc-800 pt-6">
           <Link href="/blog" className="text-amber-500 hover:text-amber-400 font-medium">

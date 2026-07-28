@@ -1,6 +1,7 @@
 // Auto-generated 2026-05-07 — do not edit manually
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: '4. ROAS vs ROI: What\'s the Difference and Which Should You Track? | ROAS in the Black',
@@ -130,6 +131,8 @@ export default function BlogPost() {
             Calculate My Break-Even ROAS →
           </Link>
         </div>
+
+        <RelatedArticles currentSlug="4-roas-vs-roi-whats-the-difference-and-which-should-you-track" />
 
         <div className="flex gap-6 text-sm border-t border-zinc-800 pt-6">
           <Link href="/blog" className="text-amber-500 hover:text-amber-400 font-medium">

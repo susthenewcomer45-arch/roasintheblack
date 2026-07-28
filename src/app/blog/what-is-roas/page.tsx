@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AdSlot from "../../components/AdSlot";
+import RelatedArticles from "@/components/RelatedArticles";
 
 export const metadata: Metadata = {
   title: "What Is ROAS? A Plain English Guide for Business Owners",
@@ -181,6 +182,8 @@ export default function WhatIsROASBlogPage() {
             campaign below it is costing you money — regardless of how the
             dashboard looks.
           </p>
+
+          <RelatedArticles currentSlug="what-is-roas" />
 
           <div className="mt-8 pt-6 border-t border-zinc-800 flex flex-wrap gap-6">
             <Link href="/" className="text-amber-500 hover:text-amber-400 text-sm font-medium">

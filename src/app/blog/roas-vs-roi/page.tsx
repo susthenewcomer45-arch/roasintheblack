@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AdSlot from "../../components/AdSlot";
+import RelatedArticles from "@/components/RelatedArticles";
 
 export const metadata: Metadata = {
   title: "ROAS vs ROI: What's the Difference and Which One Should You Track?",
@@ -162,6 +163,8 @@ export default function ROASvsROIPage() {
             converts your cost structure into a ROAS threshold that guarantees
             every dollar of ad spend above it is actually profitable.
           </p>
+
+          <RelatedArticles currentSlug="roas-vs-roi" />
 
           <div className="mt-8 pt-6 border-t border-zinc-800 flex flex-wrap gap-6">
             <Link href="/" className="text-amber-500 hover:text-amber-400 text-sm font-medium">

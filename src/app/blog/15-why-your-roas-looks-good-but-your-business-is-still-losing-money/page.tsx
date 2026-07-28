@@ -1,6 +1,7 @@
 // Auto-generated 2026-05-22 — do not edit manually
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: '15. Why Your ROAS Looks Good But Your Business Is Still Losing Money | ROAS in the Black',
@@ -136,6 +137,8 @@ export default function BlogPost() {
             Calculate My Break-Even ROAS →
           </Link>
         </div>
+
+        <RelatedArticles currentSlug="15-why-your-roas-looks-good-but-your-business-is-still-losing-money" />
 
         <div className="flex gap-6 text-sm border-t border-zinc-800 pt-6">
           <Link href="/blog" className="text-amber-500 hover:text-amber-400 font-medium">

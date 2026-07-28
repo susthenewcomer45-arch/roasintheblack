@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AdSlot from "../../components/AdSlot";
+import RelatedArticles from "@/components/RelatedArticles";
 
 export const metadata: Metadata = {
   title: "What Is a Good ROAS? Industry Benchmarks for 2026",
@@ -159,6 +160,8 @@ export default function GoodROASByIndustryPage() {
             use industry data only to identify when something is dramatically out
             of line — not to judge whether you&apos;re profitable.
           </p>
+
+          <RelatedArticles currentSlug="good-roas-by-industry" />
 
           <div className="mt-8 pt-6 border-t border-zinc-800 flex flex-wrap gap-6">
             <Link href="/" className="text-amber-500 hover:text-amber-400 text-sm font-medium">

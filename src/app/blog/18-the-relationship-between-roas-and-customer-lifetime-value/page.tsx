@@ -1,6 +1,7 @@
 // Auto-generated 2026-05-28 — do not edit manually
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: '18. The Relationship Between ROAS and Customer Lifetime Value | ROAS in the Black',
@@ -130,6 +131,8 @@ export default function BlogPost() {
             Calculate My Break-Even ROAS →
           </Link>
         </div>
+
+        <RelatedArticles currentSlug="18-the-relationship-between-roas-and-customer-lifetime-value" />
 
         <div className="flex gap-6 text-sm border-t border-zinc-800 pt-6">
           <Link href="/blog" className="text-amber-500 hover:text-amber-400 font-medium">

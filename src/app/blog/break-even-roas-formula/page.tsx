@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AdSlot from "../../components/AdSlot";
+import RelatedArticles from "@/components/RelatedArticles";
 
 export const metadata: Metadata = {
   title: "The Break-Even ROAS Formula: How to Calculate It and Why It Saves Money",
@@ -160,6 +161,8 @@ export default function BreakEvenFormulaRoasBlogPage() {
             automatically adjust bids to hit that efficiency — entering only the
             auctions where conversion value justifies the cost.
           </p>
+
+          <RelatedArticles currentSlug="break-even-roas-formula" />
 
           <div className="mt-8 pt-6 border-t border-zinc-800 flex flex-wrap gap-6">
             <Link href="/" className="text-amber-500 hover:text-amber-400 text-sm font-medium">

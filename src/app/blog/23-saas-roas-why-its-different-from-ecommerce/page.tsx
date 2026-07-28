@@ -1,6 +1,7 @@
 // Auto-generated 2026-06-04 — do not edit manually
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import RelatedArticles from '@/components/RelatedArticles'
 
 export const metadata: Metadata = {
   title: '23. SaaS ROAS: Why It\'s Different From eCommerce | ROAS in the Black',
@@ -132,6 +133,8 @@ export default function BlogPost() {
             Calculate My Break-Even ROAS →
           </Link>
         </div>
+
+        <RelatedArticles currentSlug="23-saas-roas-why-its-different-from-ecommerce" />
 
         <div className="flex gap-6 text-sm border-t border-zinc-800 pt-6">
           <Link href="/blog" className="text-amber-500 hover:text-amber-400 font-medium">
