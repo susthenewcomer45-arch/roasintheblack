@@ -7,6 +7,41 @@
     "readTime": "8 min read"
   },
   {
+    "slug": "poas-the-metric-that-matters-more-than-roas",
+    "title": "POAS: The Metric That Matters More Than ROAS",
+    "description": "Profit on Ad Spend accounts for what ROAS ignores. Learn how to calculate it and why it's a more reliable decision-making metric.",
+    "date": "2026-07-27",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "why-scaling-a-good-roas-campaign-can-still-lose-you-money",
+    "title": "Why Scaling a \"Good\" ROAS Campaign Can Still Lose You Money",
+    "description": "A campaign that looks profitable at low spend can quietly become unprofitable as you scale. Here's why, and how to catch it early.",
+    "date": "2026-07-27",
+    "readTime": "8 min read"
+  },
+  {
+    "slug": "the-ios-tracking-problem-why-your-attribution-is-probably-wrong",
+    "title": "The iOS Tracking Problem: Why Your Attribution Is Probably Wrong",
+    "description": "iOS privacy changes have made ad attribution unreliable. Learn why your reported conversions may not reflect what's actually driving sales.",
+    "date": "2026-07-27",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "mer-vs-roas-which-number-should-you-actually-trust",
+    "title": "MER vs. ROAS: Which Number Should You Actually Trust?",
+    "description": "Platform ROAS and blended MER often tell different stories. Learn which metric gives you a more reliable picture of ad performance.",
+    "date": "2026-07-27",
+    "readTime": "7 min read"
+  },
+  {
+    "slug": "why-your-platform-roas-and-your-bank-account-dont-match",
+    "title": "Why Your Platform ROAS and Your Bank Account Don't Match",
+    "description": "Platform-reported ROAS ignores your real costs. Learn why a 3-4x ROAS can still mean you're losing money.",
+    "date": "2026-07-27",
+    "readTime": "8 min read"
+  },
+  {
     "slug": "why-low-roas-doesnt-always-mean-a-bad-campaign",
     "title": "Why Low ROAS Doesn't Always Mean a Bad Campaign",
     "description": "Learn why a low ROAS doesn't always signal a failing campaign. Discover how profitability, customer lifetime value, and business stage change everything.",
