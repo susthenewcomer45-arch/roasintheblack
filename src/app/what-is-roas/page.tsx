@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import AdSlot from "../components/AdSlot";
 
 export const metadata: Metadata = {
   title: "What Is ROAS? Return on Ad Spend Explained",
@@ -11,8 +10,6 @@ export const metadata: Metadata = {
 export default function WhatIsROASPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
-      <AdSlot slot="what-is-roas-top" className="h-24 sm:h-20 mb-10" />
-
       <article className="space-y-6">
         <header className="space-y-3">
           <div className="text-xs font-medium text-amber-500 uppercase tracking-widest">

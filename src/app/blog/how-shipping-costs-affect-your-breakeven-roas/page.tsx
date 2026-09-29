@@ -91,13 +91,6 @@ export default function BlogPost() {
           <p className="text-zinc-400 text-lg leading-relaxed">Learn how shipping costs impact your break-even ROAS. Calculate profitable ad spend with real examples for ecommerce brands.</p>
         </header>
 
-        <div
-          className="flex items-center justify-center border border-dashed border-zinc-700 bg-zinc-900/50 rounded-lg text-zinc-600 text-xs tracking-widest uppercase h-24 sm:h-20"
-          aria-label="Advertisement"
-        >
-          <span>Advertisement</span>
-        </div>
-
         <div className="border-t border-zinc-800 pt-6 space-y-6">
           {sections.map((section, i) => (
             <div key={i}>

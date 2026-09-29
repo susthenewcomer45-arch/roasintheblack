@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import ROASCalculator from "./components/ROASCalculator";
-import AdSlot from "./components/AdSlot";
 import Link from "next/link";
 import { generateWebApplicationSchema } from "@/lib/schema";
 
@@ -19,8 +18,6 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webApplicationSchema) }}
       />
-
-      <AdSlot slot="homepage-top" className="h-24 sm:h-20" />
 
       <section className="text-center space-y-4">
         <h1 className="text-3xl sm:text-4xl font-bold text-zinc-100 tracking-tight">
@@ -56,7 +53,7 @@ export default function HomePage() {
           returns, platform fees, etc.), and the tool instantly calculates
           your break-even ROAS, total cost percentage, gross margin, and
           clear guidance on what that means for your business. No sign-up, no
-          email, no tracking.
+          email required — just enter your numbers and get your answer.
         </p>
         <p className="text-zinc-400 text-base leading-relaxed">
           The goal is simple: replace guesswork with math that&apos;s specific
@@ -86,7 +83,7 @@ export default function HomePage() {
               type: "Online Apparel Store",
               scenario:
                 "Sarah sells women's clothing with a 45% COGS, 10% shipping costs, and 3% in platform fees. She was running Meta ads at 2.8x ROAS thinking she was profitable.",
-              roas: "2.17x",
+              roas: "2.38x",
               takeaway:
                 "Sarah realized she was actually profitable — but only barely. She used this to set a minimum 2.5x ROAS floor on all campaigns.",
             },
@@ -95,7 +92,7 @@ export default function HomePage() {
               type: "HVAC Company",
               scenario:
                 "Mike runs a local HVAC company with low product costs but high labor (55% of revenue) and fuel/logistics costs of 8%. He was unsure if his Google Ads were worth it.",
-              roas: "3.12x",
+              roas: "2.70x",
               takeaway:
                 "Mike discovered his Google Ads at 4x ROAS were genuinely profitable. He doubled his ad budget the following month.",
             },
@@ -104,9 +101,9 @@ export default function HomePage() {
               type: "Supplement Brand",
               scenario:
                 "A supplement brand had 35% COGS, 12% fulfillment, and 6% in chargebacks and returns. They were scaling TikTok ads at 3x ROAS assuming profitability.",
-              roas: "3.77x",
+              roas: "2.13x",
               takeaway:
-                "They were actually losing money on every sale. They paused scaling, cut fulfillment costs, and reset their ROAS target to 4.5x.",
+                "They were actually solidly profitable — well above their 2.13x break-even. They used the clarity to keep scaling TikTok spend and set a 2.5x ROAS floor going forward.",
             },
             {
               icon: "💻",
@@ -266,7 +263,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <AdSlot slot="homepage-bottom" className="h-24 sm:h-20" />
     </div>
   );
 }

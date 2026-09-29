@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import AdSlot from "../../components/AdSlot";
 import RelatedArticles from "@/components/RelatedArticles";
 
 export const metadata: Metadata = {
@@ -30,8 +29,6 @@ export default function ROASvsROIPage() {
             right on paper and fail in practice.
           </p>
         </header>
-
-        <AdSlot slot="blog-roas-vs-roi" className="h-24 sm:h-20" />
 
         <div className="border-t border-zinc-800 pt-6 space-y-5 text-zinc-400 leading-relaxed">
           <h2 className="text-xl font-semibold text-zinc-200">

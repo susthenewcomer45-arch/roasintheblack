@@ -92,13 +92,6 @@ export default function BlogPost() {
           <p className="text-zinc-400 text-lg leading-relaxed">Break-even ROAS is the metric that determines profitability. Learn why it matters more than raw ROAS and how to calculate yours.</p>
         </header>
 
-        <div
-          className="flex items-center justify-center border border-dashed border-zinc-700 bg-zinc-900/50 rounded-lg text-zinc-600 text-xs tracking-widest uppercase h-24 sm:h-20"
-          aria-label="Advertisement"
-        >
-          <span>Advertisement</span>
-        </div>
-
         <div className="border-t border-zinc-800 pt-6 space-y-6">
           {sections.map((section, i) => (
             <div key={i}>
